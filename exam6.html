@@ -133,11 +133,15 @@
         var needInput2 = document.getElementById('need-input2');
         var loginBack = document.getElementById('backLogin');
 
+
+        // function case occurred login
         function clickLogin() {
+
+            // set value
             var userName = document.getElementById("user").value;
             var passWord = document.getElementById("pass").value;
 
-            if (userName === '' && passWord === '') {
+            if (userName == '' && passWord == '') {
 
                 needInput.innerText = 'Fill this box!';
 
@@ -152,11 +156,15 @@
             }
         }
 
+        //  hide modal login and show modal  change pass
         function clickForgot() {
             modal.setAttribute('style', 'display: none');
             modal2.setAttribute('style', 'display:block');
             needInput2.innerText = '';
         }
+
+
+        //  function case occurred change pass
 
         function clickSave() {
 
@@ -176,6 +184,8 @@
                 modal2.tongle();
             }
         }
+
+        //  hide mode change pass and show modal login
         loginBack.onclick = function() {
             needInput2.innerText = '';
             modal2.setAttribute('style', 'display: none');
